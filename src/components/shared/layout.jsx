@@ -1,15 +1,18 @@
-import React from "react";
-import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import Sidebar from './sidebar';
 
-export default function Layout(){
+export default function Layout() {
     return (
-        <Router>
-            <Routes>
-                < Route path="home" element={<Home/>} />
+        <div className='flex flex-row bg-neutral-100 h-screen w-screen overflow-hidden'>
+            <Sidebar/>
 
-                
-            </Routes>
-        </Router>
+            <div className='p-4'>
+                <div className='bg-teal-200'>Header</div>
+                <div>{<Outlet/>}</div>
+            </div>
+            
+        </div>
+    );
+}
 
-    )
-};
