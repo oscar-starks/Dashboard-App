@@ -9,7 +9,7 @@ export default function Layout() {
             <Sidebar/>
 
             <div className= 'flex flex-row bg-neutral-100 h-screen w-screen'>
-                <div className='flex-1 bg-teal-200 h-16 px-4'>
+                <div className='flex-1 bg-white h-16 px-4'>
                     <Header/>
                 </div>
                 <div>{<Outlet/>}</div>
@@ -19,4 +19,3 @@ export default function Layout() {
     );
 }
 
-// flex-row bg-neutral-100 h-screen w-screen overflow-hidden
